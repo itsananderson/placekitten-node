@@ -1,0 +1,30 @@
+{
+  "name": "placekitten",
+  "version": "0.1.0",
+  "description": "Downloads placekitten.com images to your machine",
+  "main": "lib/placekitten.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "placekitten": "./bin/placekitten-cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsananderson/placekitten-node.git"
+  },
+  "keywords": [
+    "placekitten",
+    "cli"
+  ],
+  "author": "Will Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itsananderson/placekitten-node/issues"
+  },
+  "homepage": "https://github.com/itsananderson/placekitten-node",
+  "dependencies": {
+    "q": "^1.0.1",
+    "commander": "^2.2.0"
+  }
+}
