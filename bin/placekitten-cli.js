@@ -27,7 +27,7 @@ for (i = 2; i < process.argv.length; i++) {
 for (i = 0; i < sizes.length; i++ ) {
     size = sizes[i];
     console.log('Downloading ' + size);
-    placekitten(size, program.directory).then(
+    placekitten(size, {'directory' : program.directory}).then(
         function(path) {
             console.log('  Done. ' + path);
         }, function(error) {

@@ -25,6 +25,7 @@
   "homepage": "https://github.com/itsananderson/placekitten-node",
   "dependencies": {
     "q": "^1.0.1",
-    "commander": "^2.2.0"
+    "commander": "^2.2.0",
+    "extend": "^1.2.1"
   }
 }
