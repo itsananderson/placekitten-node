@@ -1,37 +1,22 @@
 #!/usr/bin/env node
 
-var program = require('commander')
-    package = require('../package.json'),
-    placekitten = require('../lib/placekitten');
+var program = require('commander');
+    pkg = require('../package.json'),
+    placebase = require('placebase');
 
 var i, curArg, size,
     sizes = [];
 
 program
-    .version(package.version)
+    .version(pkg.version)
     .option('-d, --directory <path>', 'Directory to output images into. Defaults to current directory', '.')
     .parse(process.argv);
 
-for (i = 2; i < process.argv.length; i++) {
-    curArg = process.argv[i];
-    if (curArg != '') {
-        // Skip two args when a flag is encountered
-        if (curArg[0] == '-') {
-            i++;
-        } else {
-            sizes.push(curArg);
-        }
-    }
-}
+var sizes = placebase.getSizes(process.argv);
 
-for (i = 0; i < sizes.length; i++ ) {
-    size = sizes[i];
-    console.log('Downloading ' + size);
-    placekitten(size, {'directory' : program.directory}).then(
-        function(path) {
-            console.log('  Done. ' + path);
-        }, function(error) {
-            console.log(error);
-        }
-    );
-}
+var options = {
+    directory: program.directory,
+    urlBase: 'http://placekitten.com/'
+};
+
+placebase.downloadAll(sizes, options);

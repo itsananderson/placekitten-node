@@ -1,8 +1,7 @@
 {
   "name": "placekitten",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Downloads placekitten.com images to your machine",
-  "main": "lib/placekitten.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,8 +23,7 @@
   },
   "homepage": "https://github.com/itsananderson/placekitten-node",
   "dependencies": {
-    "q": "^1.0.1",
     "commander": "^2.2.0",
-    "extend": "^1.2.1"
+    "placebase": "^0.1.1"
   }
 }
