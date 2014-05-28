@@ -12,12 +12,6 @@ Installing is quite simple
 npm install -g placekitten
 ```
 
-If you want to reuse the file fetching logic, you can also install placekitten as a dependency of your own module
-
-```
-npm install --save placekitten
-```
-
 Usage
 -----
 
