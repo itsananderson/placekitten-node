@@ -1,6 +1,6 @@
 {
   "name": "placekitten",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Downloads placekitten.com images to your machine",
   "main": "lib/placekitten.js",
   "scripts": {
